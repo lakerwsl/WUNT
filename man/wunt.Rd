@@ -2,11 +2,13 @@
 \alias{wunt}
 \title{Data-driven Uniform transformer.}
 \usage{
-wunt(x,z,y,type='constant',marginal=FALSE,extra=FALSE,xextra=NULL,method='Kernel',h=NULL,kernel='gaussian',degree=2,interact=TRUE)
+wunt(x,z,y,type='constant',marginal=FALSE,extra=FALSE,xextra=NULL,
+method='Kernel',h=NULL,kernel='gaussian',degree=2,interact=TRUE)
 }
 \arguments{
 \item{x}{A data matrix/vector}
 \item{z}{A vector of treamtment assignment, with 1 for treated and 0 for control.}
+\item{y}{A vector of observed outcomes, with length(y)=length(z).}
 \item{type}{Type of the smooth kernel function used to approximate the density of the covariates in the control group. type should be one of 'constant', 'linear' and 'quadratic'.}
 \item{marginal}{An indicator for whether the Uniform transformer is constructed based on the marginal distribution or joint distribution. By defaul, marginal is FALSE, i.e., the Uniform transformer is constructed based on the joint distribution of x.}
 \item{extra}{An indicator for whether there is extra unlabeled data to construct the Uniform transformer.}
@@ -15,10 +17,10 @@ wunt(x,z,y,type='constant',marginal=FALSE,extra=FALSE,xextra=NULL,method='Kernel
 \item{h}{The bandwidth to be used for the Kernel method. }
 \item{kernel}{Type of kernel. kernel can be chosen from 'gaussian','gaussian4','gaussian6','gaussian8','gaussian10','epanechnikov','uniform','triangular','triweight','tricube','biweight',cosine','silverman'}
 \item{degree}{Degree of polynomials for the basis functions of the Projection method.}
-\item{interaction}{An indicator for whether interactions would be included for the basis functions.}
+\item{interact}{An indicator for whether interactions would be included for the basis functions.}
 }
 \value{
-\item{Estimated average treatment effect on the treated group.}
+\item{est}{Estimated average treatment effect on the treated group.}
 \item{weight}{Constructed weights for the each subject in the control group.}
 \item{control}{Transformed data for the control group. }
 \item{treated}{Tranformed data for the treated group.}

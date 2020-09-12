@@ -1,11 +1,10 @@
 Package: WUNT
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Covariate balancing by uniform transformer
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: Ruoqi Yu <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Ruoqi Yu, Shulei Wang
+Maintainer: Ruoqi Yu <ruoqiyu@wharton.upenn.edu>
+Description: Nonparametric estimation for average treatment effects on the treated group based on covariate balancing by uniform transformer.
+License: GPL(>=2)
 Encoding: UTF-8
 LazyData: true

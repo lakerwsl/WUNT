@@ -1,4 +1,4 @@
-wunt <- function(x,z,y,type='constant',marginal=F,extra=F,xextra=NULL,method='Kernel',h=NULL,kernel='gaussian',degree=2,interact=T){
+wunt <- function(x,z,y,type='constant',marginal=FALSE,extra=FALSE,xextra=NULL,method='Kernel',h=NULL,kernel='gaussian',degree=2,interact=TRUE){
   if (extra) stopifnot(!is.null(xextra))
   #ATT
   if (is.vector(x)) x<-matrix(x,ncol=1)

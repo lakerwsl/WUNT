@@ -13,7 +13,7 @@ binning<-function(v,nbin,range=c(0,1)){
   }
   cutpt1<-sort(v)[loc[1:(nbin-1)]]
   cutpt2<-sort(v)[loc[1:(nbin-1)]+1]
-  cutpt<-cutpt1+(cutpt2-cutpt1)*runif(nbin-1)
+  cutpt<-cutpt1+(cutpt2-cutpt1)*stats::runif(nbin-1)
   s=c(range[1],cutpt)
   e=c(cutpt,range[2])
   list(b=b,s=s,e=e)

@@ -1,4 +1,4 @@
-transformer<-function(x,newx,marginal=F,type='constant'){
+transformer<-function(x,newx,marginal=FALSE,type='constant'){
   if (is.vector(x)){
     n<-length(x)
     d<-1
